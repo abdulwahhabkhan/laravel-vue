@@ -15,10 +15,12 @@ use Illuminate\Http\Request;
 //public routes
 Route::group(['prefix'=>'/v1', 'middleware'=>['guest:api'] ], function (){
     Route::post('login', 'API\Auth\UserController@login');
+
 });
 
 //private routes
 Route::group(['prefix'=>'/v1', 'middleware'=>['auth:api'] ], function (){
+    Route::post('logout', 'API\Auth\UserController@logout');
     Route::get('user', function (Request $request) {
         return $request->user();
     });

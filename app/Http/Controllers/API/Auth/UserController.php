@@ -63,4 +63,17 @@ class UserController extends Controller
         $user = Auth::user();
         return response()->json(['user' => $user], $this-> successStatus);
     }
+
+    /**
+     * @param Request $request
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function logout(Request $request)
+    {
+        $request->user()->token()->revoke();
+
+        $response= [];
+        return response()->json($response, 204);
+    }
 }
