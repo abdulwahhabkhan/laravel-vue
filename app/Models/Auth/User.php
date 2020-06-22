@@ -38,6 +38,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function getImageAttribute($value)
+    {
+        return '/images/profile.svg';
+    }
+
     public static function getRandomUser()
     {
         return self::inRandomOrder()->first()->id;

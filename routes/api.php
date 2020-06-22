@@ -23,7 +23,7 @@ Route::group(['prefix'=>'/v1', 'middleware'=>['auth:api'] ], function (){
     Route::post('logout', 'API\Auth\UserController@logout');
     Route::get('user', function (Request $request) {
         $user = $request->user();
-        return ['name'=> $user->name, 'email'=> $user->email, 'photo'=>'/static/media/profile.png'];
+        return ['name'=> $user->name, 'email'=> $user->email, 'photo'=>url($user->image)];
     });
     Route::get('tickets', ['uses'=>'TicketController@index', 'as'=>'ticket.list']);
     Route::get('users/list', ['uses'=>'UserController@list', 'as'=>'users.list']);
