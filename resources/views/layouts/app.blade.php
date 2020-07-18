@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/landing.css') }}" rel="stylesheet">
+    <link href="{{ asset(mix('css/landing.css')) }}" rel="stylesheet">
 </head>
 <body>
 <div id="header" class="header navbar navbar-expand-md bg-dark  fixed-top">
@@ -23,7 +23,6 @@
             </button>
             <a href="/" class="navbar-brand">
                 <img src="/images/vue-laravel.png" alt="Laravel Vue App" class="brand-image">
-                </span>
             </a>
         </div>
         <!-- end navbar-header -->

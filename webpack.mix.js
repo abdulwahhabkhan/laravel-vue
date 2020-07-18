@@ -1,5 +1,5 @@
 const mix = require('laravel-mix');
-
+require('laravel-mix-versionhash');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -14,3 +14,4 @@ mix.extract();
 mix.js('resources/js/app.js', 'public/js').sourceMaps()
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/landing.scss', 'public/css');
+mix.versionHash();

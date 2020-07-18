@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset(mix('css/app.css')) }}" rel="stylesheet">
     <style type="text/css">
         #splash-screen {
             display: block;
@@ -84,9 +84,9 @@
             window.user = @json(auth()->user());
         </script>
     @endauth
-    <script src="{{ mix('js/manifest.js') }}"></script>
-    <script src="{{ mix('js/vendor.js') }}"></script>
-    <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ asset(mix('js/manifest.js')) }}"></script>
+    <script src="{{ asset(mix('js/vendor.js')) }}"></script>
+    <script src="{{ asset(mix('js/app.js')) }}"></script>
 
 </body>
 </html>
