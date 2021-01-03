@@ -8,12 +8,12 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.2.5",
+        "php": "^7.3.0",
         "fideloper/proxy": "^4.4",
-        "laravel/framework": "^7.20",
-        "laravel/passport": "^7.5.1",
+        "laravel/framework": "^8.0",
+        "laravel/passport": "^10.0",
         "laravel/tinker": "^2.4",
-        "laravel/ui": "^2.1"
+        "laravel/ui": "^3.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.4",
@@ -21,7 +21,7 @@
         "fzaninotto/faker": "^1.9",
         "mockery/mockery": "^1.4",
         "nunomaduro/collision": "^4.2",
-        "phpunit/phpunit": "^8.5"
+        "phpunit/phpunit": "^9.0"
     },
     "config": {
         "optimize-autoloader": true,
@@ -62,7 +62,7 @@
         ],
         "post-install-cmd": [
             "php artisan clear-compiled",
-            "chmod -R 777 storage",
+            "chmod -R 755 storage",
             "php artisan passport:keys",
             "php artisan storage:link"
         ]
