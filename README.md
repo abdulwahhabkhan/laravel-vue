@@ -1,4 +1,4 @@
-# Laravel 5.8 Project management solution
+# Laravel 8.0 Project management solution
 This is the basic application for creating and managing the projects. This application is purely for practicing the different aspects for laravel and VueJS.
 
 ## Features
