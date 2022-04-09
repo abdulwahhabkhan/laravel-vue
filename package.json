@@ -31,7 +31,7 @@
         "bootstrap-vue": "^2.15.0",
         "laravel-mix-versionhash": "^1.1.6",
         "mockjs": "^1.1.0",
-        "moment": "^2.27.0",
+        "moment": "^2.29.2",
         "vue-avatar": "^2.3.0",
         "vue-bootstrap-datetimepicker": "^5.0.1",
         "vue-breadcrumbs": "^1.2.0",
